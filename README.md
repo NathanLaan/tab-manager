@@ -2,7 +2,6 @@
 
 Tab-Manager is a Google Chrome extension for managing and searching through the list of open tabs.
 
-
 [![Chrome Web Store Version](https://img.shields.io/chrome-web-store/v/ojnfapijbeobcdnmngijlngbiaknejjo.svg?style=flat-square)](https://chrome.google.com/webstore/detail/tab-manager/ojnfapijbeobcdnmngijlngbiaknejjo)
 [![Chrome Web Store Downloads](https://img.shields.io/chrome-web-store/d/ojnfapijbeobcdnmngijlngbiaknejjo.svg?style=flat-square)](https://chrome.google.com/webstore/detail/tab-manager/ojnfapijbeobcdnmngijlngbiaknejjo)
 [![Chrome Web Store Rating](https://img.shields.io/chrome-web-store/rating/ojnfapijbeobcdnmngijlngbiaknejjo.svg?style=flat-square)](https://chrome.google.com/webstore/detail/tab-manager/ojnfapijbeobcdnmngijlngbiaknejjo)
