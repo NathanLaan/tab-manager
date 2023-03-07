@@ -1,8 +1,6 @@
 var listElement;
 
 function onLoadTabs(tabs) {
-  //listElement.textContent = ""; // textContent faster than innerHTML
-  //listElement.innerText = "";
   listElement.replaceChildren();
   for (const tab of tabs) {
     listElement.appendChild(createTabElement(tab));
@@ -21,8 +19,6 @@ window.onload = function () {
 
   const searchElement = document.getElementById('tabSearch');
   searchElement.addEventListener('input', function(e) {
-    // GET FILTERED
-    console.log(searchElement.value);
     chrome.tabs.query({title:"*" + searchElement.value + "*"})
       .then(onLoadTabs, onLoadTabsError);
   });
