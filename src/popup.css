@@ -101,3 +101,19 @@ body {
   line-height: 18px;
   letter-spacing: 0.2px;
 }
+
+.tab-item-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 3px;
+  justify-content: center;
+  display: block;
+  display: flex;
+}
+.tab-item-close:hover {
+  background: #C3C3C3;
+}

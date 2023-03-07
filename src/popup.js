@@ -46,6 +46,15 @@ function createTabElement(tab) {
   const tabTitleElement = document.createElement('div');
   tabTitleElement.className = "tab-item-title";
   tabTitleElement.innerText = tab.title;
+  const tabCloseElement = document.createElement('div');
+  tabCloseElement.className = "tab-item-close";
+  const tabCloseIconElement = document.createElement('i');
+  tabCloseIconElement.className = "fa-solid fa-xmark";
+  tabCloseElement.appendChild(tabCloseIconElement);
+  tabElement.appendChild(tabIconElement);
+  tabElement.appendChild(tabTitleElement);
+  tabElement.appendChild(tabCloseElement);
+
   tabTitleElement.onclick = function () {
     try {
       chrome.windows.update(tab.windowId, { focused: true });
@@ -56,10 +65,14 @@ function createTabElement(tab) {
       console.error(e);
     }
   }
-  tabElement.appendChild(tabIconElement);
-  tabElement.appendChild(tabTitleElement);
-  //
-  // TODO: Add close button.
-  //
+  tabCloseElement.onclick = function () {
+    try {
+      chrome.tabs.remove(tab.id)
+        .then(tabElement.parentElement.removeChild(tabElement));
+    } catch (e) {
+      // TODO: User error message?
+      console.error(e);
+    }
+  }
   return tabElement;
 }
