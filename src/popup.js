@@ -1,10 +1,20 @@
 var listElement;
+var queryString;
 
 function onLoadTabs(tabs) {
-  listElement.replaceChildren();
+  //listElement.replaceChildren();
+  let tabList = [];
+  const r = new RegExp(queryString, "i");
   for (const tab of tabs) {
-    listElement.appendChild(createTabElement(tab));
+    if(queryString && tab.title.match(r)) {
+      //listElement.appendChild(createTabElement(tab));
+      tabList.push(createTabElement(tab));
+    } else if(!queryString) {
+      //listElement.appendChild(createTabElement(tab));
+      tabList.push(createTabElement(tab));
+    }
   }
+  listElement.replaceChildren(...tabList);
 }
 
 function onLoadTabsError(error) {
@@ -19,7 +29,9 @@ window.onload = function () {
 
   const searchElement = document.getElementById('tabSearch');
   searchElement.addEventListener('input', function(e) {
-    chrome.tabs.query({title:"*" + searchElement.value + "*"})
+    queryString = searchElement.value;
+    //chrome.tabs.query({title:"*" + searchElement.value + "*"})
+    chrome.tabs.query({})
       .then(onLoadTabs, onLoadTabsError);
   });
   searchElement.focus();

@@ -14,7 +14,7 @@ Tab-Manager is a Google Chrome extension for managing and searching through the 
   - [x] List shows favicon and title.
   - [x] Clicking item in tab list sends focus to that tab, and closes the extension window.
 - [x] v0.1.1: The search input allows the user to filter the list of tabs. Case-sensitive.
-- [ ] v0.1.2: The search input allows the user to filter the list of tabs. Case-insensitive.
+- [x] v0.1.2: The search input allows the user to filter the list of tabs. Case-insensitive.
 - [ ] v0.2.0: Allow user to close tabs with an "x" button beside the tab title or favicon.
 - [ ] v0.2.1: Allow user to pin tabs with a "+" button beside the tab title or favicon.
 
