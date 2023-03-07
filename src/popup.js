@@ -23,7 +23,7 @@ window.onload = function () {
   searchElement.addEventListener('input', function(e) {
     // GET FILTERED
     console.log(searchElement.value);
-    chrome.tabs.query({title:"/^*" + searchElement.value + "*/regex/i"})
+    chrome.tabs.query({title:"*" + searchElement.value + "*"})
       .then(onLoadTabs, onLoadTabsError);
   });
   searchElement.focus();
