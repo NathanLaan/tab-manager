@@ -44,6 +44,7 @@ Tab-Manager is a Google Chrome extension for managing and searching through the 
     - [ ] Show/enable "dangerous" window/tab close functionality.
   - [ ] Add shortcut to browser settings/keyboard shortcuts.
   - [ ] Issue: Visual bug: If you scroll down, and then up, the top tab item is cut off.
+  - [ ] Issue: Sometimes clicking on tabs doesn't navigate the user to the tab. Need to reproduce.
 
 ## References
 
