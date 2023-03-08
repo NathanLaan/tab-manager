@@ -7,6 +7,14 @@ Tab-Manager is a Google Chrome extension for managing and searching through the 
 [![Chrome Web Store Rating](https://img.shields.io/chrome-web-store/rating/ojnfapijbeobcdnmngijlngbiaknejjo.svg?style=flat-square)](https://chrome.google.com/webstore/detail/tab-manager/ojnfapijbeobcdnmngijlngbiaknejjo)
 [![Chrome Web Store Rating Count](https://img.shields.io/chrome-web-store/rating-count/ojnfapijbeobcdnmngijlngbiaknejjo.svg?style=flat-square)](https://chrome.google.com/webstore/detail/tab-manager/ojnfapijbeobcdnmngijlngbiaknejjo/reviews)
 
+## Usage
+
+1. Install the [Tab-Manager extension from the Google Chrome web store](https://chrome.google.com/webstore/detail/tab-manager/ojnfapijbeobcdnmngijlngbiaknejjo).
+2. Pin the Tab-Manager extension to the Google Chrome toolbar.
+3. Click the Tab-Manager icon in the Google Chrome toolbar to manage your tabs.
+
+![Tab-Manager Extension in Google Chrome](/screenshot-v0.3.2.png)
+
 ## Roadmap
 
 - [x] v0.1.x
