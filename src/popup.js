@@ -73,7 +73,7 @@ function createTabElement(tab) {
   const tabCloseElement = createElement("div", "tab-item-close");
   tabCloseElement.className = "tab-item-close";
   tabCloseElement.title = "Close the Tab";
-  const tabCloseIconElement = createElement("i", "fa-solid fa-xmark");
+  const tabCloseIconElement = createElement("i", "fas fa-xmark");
   tabCloseElement.appendChild(tabCloseIconElement);
   tabElement.appendChild(tabIconElement);
   tabElement.appendChild(tabTitleElement);
