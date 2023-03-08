@@ -22,7 +22,7 @@ function onLoadTabsError(error) {
 }
 
 window.onload = function () {
-  listElement = document.getElementById('tablist');
+  listElement = document.getElementById("tablist");
 
   chrome.tabs.query({})
     .then(onLoadTabs, onLoadTabsError);
@@ -38,8 +38,8 @@ window.onload = function () {
     }
   }
 
-  const searchElement = document.getElementById('tabSearch');
-  searchElement.addEventListener('input', function(e) {
+  const searchElement = document.getElementById("tabSearch");
+  searchElement.addEventListener("input", function(e) {
     queryString = searchElement.value;
     //chrome.tabs.query({title:"*" + searchElement.value + "*"})
     chrome.tabs.query({})
@@ -78,10 +78,10 @@ function createTabElement(tab) {
   tabElement.appendChild(tabIconElement);
   tabElement.appendChild(tabTitleElement);
 
-  const tabPinElement = document.createElement('div');
+  const tabPinElement = document.createElement("div");
   tabPinElement.className = "tab-item-pin";
   tabPinElement.title = "Pin the Tab";
-  const tabPinIconElement = document.createElement('i');
+  const tabPinIconElement = document.createElement("i");
 
   setPinnedIcon(tabPinIconElement, tab.pinned);
   tabPinElement.appendChild(tabPinIconElement);
