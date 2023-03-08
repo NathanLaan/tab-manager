@@ -27,6 +27,17 @@ window.onload = function () {
   chrome.tabs.query({})
     .then(onLoadTabs, onLoadTabsError);
 
+  const settingsElement = document.getElementById("settingsDiv");
+  settingsElement.onclick = function () {
+    try {
+      chrome.tabs.create({ url:"chrome://extensions/shortcuts" });
+      //chrome.tabs.create({ "edge://extensions/shortcuts" });
+    } catch (e) {
+      // TODO: User error message?
+      console.error(e);
+    }
+  }
+
   const searchElement = document.getElementById('tabSearch');
   searchElement.addEventListener('input', function(e) {
     queryString = searchElement.value;

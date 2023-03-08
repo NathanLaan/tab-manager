@@ -55,6 +55,10 @@ body {
   padding: 0px 10px 0px 10px;
   min-height: 465px;
 }
+.tab-list-footer {
+  padding: 0px 10px 0px 10px;
+  min-height: 60px;
+}
 .search-input {
   font-family: "Lucida Grande", Tahoma, sans-serif;
   font-size: 100%;
@@ -72,7 +76,7 @@ body {
   border: solid 1px #BEBECE;
   background-color: #FFFFFF;
 }
-.tab-item {
+.tab-item, .tab-footer-item {
   position: relative;
   padding: 10px;
   margin-bottom: 5px;
@@ -81,7 +85,10 @@ body {
   cursor: pointer;
   box-shadow: 0px;
 }
-.tab-item:hover {
+.tab-footer-item {
+  background-color: #E3E3E3;
+}
+.tab-item:hover,  .tab-footer-item:hover {
   box-shadow: 0 2px 10px 0 #C3C3C3;
   background-color: #FFFFFF;
 }

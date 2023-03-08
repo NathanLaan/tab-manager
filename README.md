@@ -30,11 +30,12 @@ Tab-Manager is a Google Chrome extension for managing and searching through the 
   - [x] v0.3.2: Add "tooltip" text (div.title) to the tab close and tab pin buttons.
   - [x] v0.3.3: Fix the shortcut key.
   - [x] v0.3.3: Show the shortcut key in the UI (tooltip?).
+  - [x] Add [shortcut to browser settings/keyboard shortcuts](chrome://extensions/shortcuts).
 - [ ] v0.4.x *Show the Window in the Tab-List Release*
   - [ ] v0.4.0: Show browser windows in the tab list UI.
   - [ ] v0.4.1: Clicking on a window element sends focus to that window.
   - [ ] v0.4.2: Feature to close entire window?
-- [ ] Future Release?
+- [ ] Backlog:
   - [ ] Show recently closed tabs? Possible?
   - [ ] Move tabs between windows?
   - [ ] Move tab to new window?
@@ -42,7 +43,6 @@ Tab-Manager is a Google Chrome extension for managing and searching through the 
   - [ ] Settings panel?
     - [ ] Edit shortcut key?
     - [ ] Show/enable "dangerous" window/tab close functionality.
-  - [ ] Add [shortcut to browser settings/keyboard shortcuts](chrome://extensions/shortcuts).
   - [ ] Issue: Visual bug: Sometimes if you scroll down, and then up, the top tab item is cut off. Seems to depend on spacing (really long tab titles perhaps?).
   - [ ] Issue: Sometimes clicking on tabs doesn't navigate the user to the tab. Need to reproduce.
 
