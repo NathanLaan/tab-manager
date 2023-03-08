@@ -45,7 +45,8 @@ Tab-Manager is a Google Chrome extension for managing and searching through the 
 
 ## References
 
-- Icons by [Flaticon](https://www.flaticon.com/free-icon/letter-t_3097109)
+- Extension icons by [Flaticon](https://www.flaticon.com/free-icon/letter-t_3097109).
+- UI icons by [Font Awesome](https://fontawesome.com/).
 
 ## Dev References
 
