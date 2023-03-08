@@ -9,14 +9,25 @@ Tab-Manager is a Google Chrome extension for managing and searching through the 
 
 ## Roadmap
 
-- [x] v0.1.0
-  - [x] Display list of all tabs.
-  - [x] List shows favicon and title.
-  - [x] Clicking item in tab list sends focus to that tab, and closes the extension window.
-- [x] v0.1.1: The search input allows the user to filter the list of tabs. Case-sensitive.
-- [x] v0.1.2: The search input allows the user to filter the list of tabs. Case-insensitive.
-- [x] v0.2.0: Allow user to close tabs with an "x" button beside the tab title or favicon.
-- [ ] v0.2.1: Allow user to pin tabs with a "+" button beside the tab title or favicon.
+- [x] v0.1.x
+  - [x] v0.1.0: Display list of all tabs with favicon and title.
+  - [x] v0.1.0: Clicking item in tab list sends focus to that tab, and closes the extension window.
+  - [x] v0.1.1: The search input allows the user to filter the list of tabs. Case-sensitive.
+  - [x] v0.1.2: The search input allows the user to filter the list of tabs. Case-insensitive.
+- [x] v0.2.x
+  - [x] v0.2.0: Allow user to close tabs with an "x" button beside the tab title or favicon.
+- [x] v0.3.x
+  - [x] v0.3.0: Show icon for each tab's pinned state.
+  - [x] v0.3.1: Allow user to pin and unpin tabs by clicking on the pin icon.
+  - [x] v0.3.2: Add "tooltip" text (div.title) to the tab close and tab pin buttons.
+- [ ] v0.4.x
+  - [ ] v0.4.0: Show browser windows in the tab list UI.
+  - [ ] v0.4.1: Clicking on a window element sends focus to that window.
+  - [ ] v0.4.2: Feature to close entire window?
+- [ ] Future Release?
+  - [ ] Move tabs between windows?
+  - [ ] Move tab to new window?
+  - [ ] Copy/clone/re-open tabs?
 
 ## References
 

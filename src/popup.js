@@ -37,22 +37,44 @@ window.onload = function () {
   searchElement.focus();
 };
 
+function setPinnedIcon(element, pinned) {
+  if(pinned) {
+    element.className = "fas fa-thumbtack";
+    element.title = "Unpin the Tab";
+  } else {
+    element.className = "fas fa-plus";
+    element.title = "Pin the Tab";
+  }
+}
+
+function createElement(elementType, cssClass) {
+  element = document.createElement(elementType);
+  element.className = cssClass;
+  return element;
+}
+
 function createTabElement(tab) {
-  const tabElement = document.createElement('div');
-  tabElement.className = "tab-item";
-  const tabIconElement = document.createElement("img");
-  tabIconElement.className = "tab-item-icon";
+  const tabElement = createElement("div", "tab-item");
+  const tabIconElement = createElement("img", "tab-item-icon");
   tabIconElement.src = tab.favIconUrl;
-  const tabTitleElement = document.createElement('div');
-  tabTitleElement.className = "tab-item-title";
+  const tabTitleElement = createElement("div", "tab-item-title");
   tabTitleElement.innerText = tab.title;
-  const tabCloseElement = document.createElement('div');
+  const tabCloseElement = createElement("div", "tab-item-close");
   tabCloseElement.className = "tab-item-close";
-  const tabCloseIconElement = document.createElement('i');
-  tabCloseIconElement.className = "fa-solid fa-xmark";
+  tabCloseElement.title = "Close the Tab";
+  const tabCloseIconElement = createElement("i", "fa-solid fa-xmark");
   tabCloseElement.appendChild(tabCloseIconElement);
   tabElement.appendChild(tabIconElement);
   tabElement.appendChild(tabTitleElement);
+
+  const tabPinElement = document.createElement('div');
+  tabPinElement.className = "tab-item-pin";
+  tabPinElement.title = "Pin the Tab";
+  const tabPinIconElement = document.createElement('i');
+
+  setPinnedIcon(tabPinIconElement, tab.pinned);
+  tabPinElement.appendChild(tabPinIconElement);
+  tabElement.appendChild(tabPinElement);
   tabElement.appendChild(tabCloseElement);
 
   tabTitleElement.onclick = function () {
@@ -60,6 +82,17 @@ function createTabElement(tab) {
       chrome.windows.update(tab.windowId, { focused: true });
       chrome.tabs.update(tab.id, { active: true });
       window.close();
+    } catch (e) {
+      // TODO: User error message?
+      console.error(e);
+    }
+  }
+  tabPinElement.onclick = function () {
+    try {
+      // Nested Promises! Need to get current tab state for each step
+      chrome.tabs.get(tab.id)
+        .then(t=> chrome.tabs.update(t.id, {pinned: !t.pinned})
+          .then(t=> setPinnedIcon(tabPinIconElement, t.pinned)));
     } catch (e) {
       // TODO: User error message?
       console.error(e);
