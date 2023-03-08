@@ -10,12 +10,12 @@
         "default": "Ctrl+Shift+E",
         "mac": "MacCtrl+Shift+E"
       },
-			"description": "Tab-Manager (Ctrl+K)",
+			"description": "Tab-Manager",
 			"global": false		
 		}
   },
   "action": {
-    "default_title": "Tab-Manager (Ctrl+K)",
+    "default_title": "Tab-Manager (Ctrl+Shift+E)",
     "default_icon": "/images/letter-t-square-32.png",
     "default_popup": "popup.html"
   },
