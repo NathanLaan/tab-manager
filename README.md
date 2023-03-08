@@ -33,9 +33,15 @@ Tab-Manager is a Google Chrome extension for managing and searching through the 
   - [ ] v0.4.1: Clicking on a window element sends focus to that window.
   - [ ] v0.4.2: Feature to close entire window?
 - [ ] Future Release?
+  - [ ] Show recently closed tabs? Possible?
   - [ ] Move tabs between windows?
   - [ ] Move tab to new window?
   - [ ] Copy/clone/re-open tabs?
+  - [ ] Fix the shortcut key.
+  - [ ] Show the shortcut key in the UI (tooltip?).
+  - [ ] Settings panel?
+    - [ ] Edit shortcut key?
+    - [ ] Show/enable "dangerous" window/tab close functionality.
 
 ## References
 
