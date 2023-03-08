@@ -28,6 +28,8 @@ Tab-Manager is a Google Chrome extension for managing and searching through the 
   - [x] v0.3.0: Show icon for each tab's pinned state.
   - [x] v0.3.1: Allow user to pin and unpin tabs by clicking on the pin icon.
   - [x] v0.3.2: Add "tooltip" text (div.title) to the tab close and tab pin buttons.
+  - [x] v0.3.3: Fix the shortcut key.
+  - [x] v0.3.3: Show the shortcut key in the UI (tooltip?).
 - [ ] v0.4.x *Show the Window in the Tab-List Release*
   - [ ] v0.4.0: Show browser windows in the tab list UI.
   - [ ] v0.4.1: Clicking on a window element sends focus to that window.
@@ -37,8 +39,6 @@ Tab-Manager is a Google Chrome extension for managing and searching through the 
   - [ ] Move tabs between windows?
   - [ ] Move tab to new window?
   - [ ] Copy/clone/re-open tabs?
-  - [ ] Fix the shortcut key.
-  - [ ] Show the shortcut key in the UI (tooltip?).
   - [ ] Settings panel?
     - [ ] Edit shortcut key?
     - [ ] Show/enable "dangerous" window/tab close functionality.

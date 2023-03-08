@@ -1,23 +1,21 @@
 {
   "name": "Tab-Manager",
   "description": "Manage tabs",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "manifest_version": 3,
   "permissions": ["tabs"],
   "commands": {
     "_execute_action": {
-			"suggested_key": {
-        "windows": "Ctrl+K",
-        "mac": "Command+K",
-        "chromeos": "Ctrl+K",
-        "linux": "Ctrl+K"
-			},
-			"description": "Tab-Manager",
+      "suggested_key": {
+        "default": "Ctrl+K",
+        "mac": "MacCtrl+K"
+      },
+			"description": "Tab-Manager (Ctrl+K)",
 			"global": false		
 		}
   },
   "action": {
-    "default_title": "Tab-Manager",
+    "default_title": "Tab-Manager (Ctrl+K)",
     "default_icon": "/images/letter-t-square-32.png",
     "default_popup": "popup.html"
   },
