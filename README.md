@@ -46,7 +46,7 @@ Tab-Manager is a Google Chrome extension for managing and searching through the 
   - [ ] Issue: Visual bug: Sometimes if you scroll down, and then up, the top tab item is cut off. Seems to depend on spacing (really long tab titles perhaps?).
   - [ ] Issue: Sometimes clicking on tabs doesn't navigate the user to the tab. Need to reproduce.
   - [ ] [Sort alphabetically](https://developer.chrome.com/docs/extensions/mv3/getstarted/tut-tabs-manager/#step-3), or group by window.
-  - [ ] Shortcut key to send focus to search textbox.
+  - [ ] Shortcut key to send focus to search textbox. [Reference](https://developer.chrome.com/docs/extensions/reference/commands/). Requires background page, and message-passing to popup.
 
     ```javascript
     const collator = new Intl.Collator();
