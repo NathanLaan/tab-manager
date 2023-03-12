@@ -57,6 +57,7 @@ Tab-Manager is a Google Chrome extension for managing and searching through the 
 
   - [ ] Shortcut key to send focus to search textbox. [Reference](https://developer.chrome.com/docs/extensions/reference/commands/). Requires background page, and message-passing to popup.
   - [ ] Update the action title to show the shortcut key even when the user updates it. Need service worker?
+  - [ ] Window -> Fullscreen feature?
 
 ## References
 
