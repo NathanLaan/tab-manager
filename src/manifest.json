@@ -1,6 +1,6 @@
 {
   "name": "Tab-Manager",
-  "description": "Manage tabs",
+  "description": "A basic tab manager that allows you to find or navigate to tabs quickly.",
   "version": "0.3.4",
   "manifest_version": 3,
   "permissions": ["tabs"],
