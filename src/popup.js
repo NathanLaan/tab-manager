@@ -58,6 +58,16 @@ function setPinnedIcon(element, pinned) {
   }
 }
 
+function setAudioIcon(element, audible, muted) {
+  if(audible && muted) {
+    element.className = "fas fa-volume-xmark";
+    element.title = "Unmute";
+  } else {
+    element.className = "fas fa-volume-high";
+    element.title = "Mute";
+  }
+}
+
 function createElement(elementType, cssClass) {
   element = document.createElement(elementType);
   element.className = cssClass;
@@ -78,8 +88,27 @@ function createTabElement(tab) {
   tabElement.appendChild(tabIconElement);
   tabElement.appendChild(tabTitleElement);
 
-  const tabPinElement = document.createElement("div");
-  tabPinElement.className = "tab-item-pin";
+  if(tab.audible || tab.mutedInfo.muted) {
+    const tabAudioElement = createElement("div", "tab-item-audio");
+    const tabAudioIconElement = document.createElement("i");
+    setAudioIcon(tabAudioIconElement, tab.audible, tab.mutedInfo.muted);
+    tabAudioElement.appendChild(tabAudioIconElement);
+    tabElement.appendChild(tabAudioElement);
+    tabAudioElement.onclick = function () {
+      try {
+        // Nested Promises! Need to get current tab state for each step
+        chrome.tabs.get(tab.id)
+          .then(t=> chrome.tabs.update(t.id, {muted: !t.mutedInfo.muted})
+            .then(t=> setAudioIcon(tabAudioIconElement, t.audible, t.mutedInfo.muted)));
+      } catch (e) {
+        // TODO: User error message?
+        console.error(e);
+      }
+    }
+    console.log(`Muted: ${tab.mutedInfo.muted} Audible: ${tab.audible}`);
+  }
+
+  const tabPinElement = createElement("div", "tab-item-pin");
   tabPinElement.title = "Pin the Tab";
   const tabPinIconElement = document.createElement("i");
 
