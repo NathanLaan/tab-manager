@@ -13,7 +13,7 @@ Tab-Manager is a Google Chrome extension for managing and searching through the 
 2. Pin the Tab-Manager extension to the Google Chrome toolbar.
 3. Click the Tab-Manager icon in the Google Chrome toolbar to manage your tabs.
 
-![Tab-Manager Extension showing pinned tab](/screenshot-v0.3.3.png)
+![Tab-Manager Extension showing pinned tab](/screenshot-v0.3.2.png)
 
 ![Tab-Manager Extension showing audible tab](/screenshot-v0.3.4-1280x800.png)
 
