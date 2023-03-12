@@ -54,8 +54,8 @@ Tab-Manager is a Google Chrome extension for managing and searching through the 
 
   - [ ] Shortcut key to send focus to search textbox. [Reference](https://developer.chrome.com/docs/extensions/reference/commands/). Requires background page, and message-passing to popup.
   - [ ] Show icon for tabs playing sound. Allow icon to mute/unmute the tab?
-    - tab.audible
-    - tab.muted
+    - tab.audible "fas fa-volume-high"
+    - tab.muted "fas fa-volume-xmark"
   - [ ] Update the action title to show the shortcut key even when the user updates it. Need service worker?
 
 ## References
