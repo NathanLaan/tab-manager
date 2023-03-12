@@ -105,7 +105,6 @@ function createTabElement(tab) {
         console.error(e);
       }
     }
-    console.log(`Muted: ${tab.mutedInfo.muted} Audible: ${tab.audible}`);
   }
 
   const tabPinElement = createElement("div", "tab-item-pin");
